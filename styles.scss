@@ -1,0 +1,43 @@
+html, body{
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+.flex{
+  display: flex;
+  &.column{
+    flex-direction: column;
+  }
+  >.flex-grow{
+    flex-grow: 1;
+  }
+  >.no-shrink{
+    flex-shrink: 0;
+  }
+  >.self-center{
+    align-self: center;
+  }
+}
+.gpu-layer{
+  will-change: transform;
+}
+.horizontal-spacer{
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  > *{
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+.vertical-spacer{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  > *{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
