@@ -22,6 +22,9 @@ body{
 .gpu-layer{
   will-change: transform;
 }
+.clickable{
+  cursor: pointer;
+}
 .horizontal-spacer{
   padding-left: 8px;
   padding-right: 8px;
