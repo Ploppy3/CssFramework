@@ -7,6 +7,10 @@ html, body{
 body{
   margin: 0;
 }
+/// Centers the text of the element
+.center-text{
+  text-align: center;
+}
 /// Shows cursor on element
 .clickable{
   cursor: pointer;
@@ -33,6 +37,14 @@ body{
   > .self-center{
     align-self: center;
   }
+}
+// Sets the element to 100% width
+.full-width{
+  width: 100%;
+}
+// Sets the element to 100% height
+.full-height{
+  height: 100%;
 }
 /// Pushes element to a unique GPU layer.
 .gpu-layer{
