@@ -1,3 +1,4 @@
+/// Padding related to .horizontal-spacer & .vertical-spacer rules
 $spacer-padding: 8px;
 
 html, body{
@@ -6,9 +7,21 @@ html, body{
 body{
   margin: 0;
 }
+/// Shows cursor on element
+.clickable{
+  cursor: pointer;
+}
+/// Quick flex display
+/// .column to specify direction
+///
+/// .flex-grow on child to force it to grow
+///
+/// .no-shrink on child to prevent it to shrink
+///
+/// .self-center on child to center
 .flex{
   display: flex;
-  &.column{
+  & .column{
     flex-direction: column;
   }
   > .flex-grow{
@@ -21,12 +34,11 @@ body{
     align-self: center;
   }
 }
+/// Pushes element to a unique GPU layer.
 .gpu-layer{
   will-change: transform;
 }
-.clickable{
-  cursor: pointer;
-}
+/// Automatic horizontal spacer
 .horizontal-spacer{
   padding-left: $spacer-padding;
   padding-right: $spacer-padding;
@@ -36,6 +48,7 @@ body{
     margin-right: $spacer-padding;
   }
 }
+/// Automatic vertical spacer
 .vertical-spacer{
   padding-top: $spacer-padding;
   padding-bottom: $spacer-padding;
