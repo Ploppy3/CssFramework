@@ -1,3 +1,5 @@
+$spacer-padding: 8px;
+
 html, body{
   height: 100%;
 }
@@ -9,13 +11,13 @@ body{
   &.column{
     flex-direction: column;
   }
-  >.flex-grow{
+  > .flex-grow{
     flex-grow: 1;
   }
-  >.no-shrink{
+  > .no-shrink{
     flex-shrink: 0;
   }
-  >.self-center{
+  > .self-center{
     align-self: center;
   }
 }
@@ -26,21 +28,21 @@ body{
   cursor: pointer;
 }
 .horizontal-spacer{
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: $spacer-padding;
+  padding-right: $spacer-padding;
   display: flex;
   > *{
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: $spacer-padding;
+    margin-right: $spacer-padding;
   }
 }
 .vertical-spacer{
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: $spacer-padding;
+  padding-bottom: $spacer-padding;
   display: flex;
   flex-direction: column;
   > *{
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: $spacer-padding;
+    margin-bottom: $spacer-padding;
   }
 }
