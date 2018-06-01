@@ -7,6 +7,10 @@ html, body{
 body{
   margin: 0;
 }
+/// Transform text to uppercase
+.uppercase{
+  text-transform: uppercase;
+}
 /// Centers the text of the element
 .center-text{
   text-align: center;
