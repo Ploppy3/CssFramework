@@ -29,7 +29,7 @@ body{
 /// .self-center on child to center
 .flex{
   display: flex;
-  & .column{
+  &.column{
     flex-direction: column;
   }
   > .flex-grow{
