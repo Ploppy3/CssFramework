@@ -32,6 +32,9 @@ body{
   &.column{
     flex-direction: column;
   }
+  &.wrap{
+    flex-wrap: wrap;
+  }
   > .flex-grow{
     flex-grow: 1;
   }
