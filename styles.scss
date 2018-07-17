@@ -44,6 +44,9 @@ body{
   > .self-center{
     align-self: center;
   }
+  > .flex-1{
+    flex: 1;
+  }
 }
 /// Sets the element to 100% width
 .full-width{
