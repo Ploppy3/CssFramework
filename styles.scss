@@ -32,8 +32,8 @@ body{
   &.column{
     flex-direction: column;
   }
-  &.wrap{
-    flex-wrap: wrap;
+  &.no-wrap{
+    flex-wrap: nowrap;
   }
   > .flex-grow{
     flex-grow: 1;
