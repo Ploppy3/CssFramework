@@ -20,7 +20,9 @@ body{
   cursor: pointer;
 }
 /// Quick flex display
-/// .column to specify direction
+/// .column specifies the direction
+///
+/// .no-wrap specifies whether the flexible items should wrap or not
 ///
 /// .flex-grow on child to force it to grow
 ///
