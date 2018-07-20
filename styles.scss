@@ -24,6 +24,8 @@ body{
 ///
 /// .no-wrap specifies whether the flexible items should wrap or not
 ///
+/// .justify-center childs based on parent direction
+///
 /// .flex-grow on child to force it to grow
 ///
 /// .no-shrink on child to prevent it to shrink
@@ -37,17 +39,18 @@ body{
   &.no-wrap{
     flex-wrap: nowrap;
   }
+  &.justify-center{
+    justify-content: center;
+  }
   > .flex-grow{
     flex-grow: 1;
+    flex-basis: 0;
   }
   > .no-shrink{
     flex-shrink: 0;
   }
   > .self-center{
     align-self: center;
-  }
-  > .flex-1{
-    flex: 1;
   }
 }
 /// Sets the element to 100% width
