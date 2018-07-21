@@ -48,8 +48,9 @@ body {
 /// Quick flex display column
 .column{
   display: flex;
-  width: 100%;
   flex-direction: column;
+  width: 100%;
+  overflow: auto;
   &.spacer {
     padding-top: $spacer-padding;
     padding-bottom: $spacer-padding;
