@@ -61,13 +61,14 @@ body {
     }
   }
   &.column {
+    width: 100%;
     flex-direction: column;
     &.spacer {
-      padding-left: $spacer-padding;
-      padding-right: $spacer-padding;
+      padding-top: $spacer-padding;
+      padding-bottom: $spacer-padding;
       >* {
-        margin-left: $spacer-padding;
-        margin-right: $spacer-padding;
+        margin-top: $spacer-padding;
+        margin-bottom: $spacer-padding;
       }
     }
     &.inner-spacer {
