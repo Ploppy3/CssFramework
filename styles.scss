@@ -1,22 +1,22 @@
 /// Padding related to .horizontal-spacer & .vertical-spacer rules
 $spacer-padding: 8px;
-
-html, body{
+html,
+body {
   height: 100%;
 }
-body{
+body {
   margin: 0;
 }
 /// Transform text to uppercase
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
 /// Centers the text of the element
-.center-text{
+.center-text {
   text-align: center;
 }
 /// Shows cursor on element
-.clickable{
+.clickable {
   cursor: pointer;
 }
 /// Quick flex display
@@ -31,40 +31,83 @@ body{
 /// .no-shrink on child to prevent it to shrink
 ///
 /// .self-center on child to center
-.flex{
+.flex {
   display: flex;
-  &.column{
-    flex-direction: column;
-  }
-  &.no-wrap{
+  &.no-wrap {
     flex-wrap: nowrap;
   }
-  &.justify-center{
+  &.justify-center {
     justify-content: center;
   }
-  > .flex-grow{
+  &.spacer:not(.column) {
+    padding-left: $spacer-padding;
+    padding-right: $spacer-padding;
+    >* {
+      margin-left: $spacer-padding;
+      margin-right: $spacer-padding;
+    }
+  }
+  &.inner-spacer:not(.column) {
+    >* {
+      margin: 0 $spacer-padding/2;
+    }
+    >*:first-child {
+      margin-left: 0;
+      margin-right: $spacer-padding/2;
+    }
+    >*:last-child {
+      margin-left: $spacer-padding/2;
+      margin-right: 0;
+    }
+  }
+  &.column {
+    flex-direction: column;
+    &.spacer {
+      padding-left: $spacer-padding;
+      padding-right: $spacer-padding;
+      >* {
+        margin-left: $spacer-padding;
+        margin-right: $spacer-padding;
+      }
+    }
+    &.inner-spacer {
+      >* {
+        margin: $spacer-padding/2 0;
+      }
+      >*:first-child {
+        margin-top: 0;
+        margin-bottom: $spacer-padding/2;
+      }
+      >*:last-child {
+        margin-top: $spacer-padding/2;
+        margin-bottom: 0;
+      }
+    }
+  }
+  >.flex-grow {
     flex-grow: 1;
     flex-basis: 0;
   }
-  > .no-shrink{
+  >.no-shrink {
     flex-shrink: 0;
   }
-  > .self-center{
+  >.self-center {
     align-self: center;
   }
 }
 /// Sets the element to 100% width
-.full-width{
+.full-width {
   width: 100%;
 }
 /// Sets the element to 100% height
-.full-height{
+.full-height {
   height: 100%;
 }
 /// Pushes element to a unique GPU layer.
-.gpu-layer{
+.gpu-layer {
   will-change: transform;
 }
+/*
 /// Automatic horizontal spacer
 .horizontal-spacer{
   padding-left: $spacer-padding;
@@ -74,15 +117,6 @@ body{
     margin-left: $spacer-padding;
     margin-right: $spacer-padding;
   }
-}
-/// Prevent content overflow, overflow is hidden
-.no-overflow{
-  overflow: hidden;
-}
-/// Prevent content overflow,overflowing content will be accessible via scroll-bars
-.overflow{
-  overflow: auto;
-  will-change: transform;
 }
 /// Automatic vertical spacer
 .vertical-spacer{
@@ -94,4 +128,15 @@ body{
     margin-top: $spacer-padding;
     margin-bottom: $spacer-padding;
   }
+}
+//*/
+
+/// Prevent content overflow, overflow is hidden
+.no-overflow {
+  overflow: hidden;
+}
+/// Prevent content overflow,overflowing content will be accessible via scroll-bars
+.overflow {
+  overflow: auto;
+  will-change: transform;
 }
