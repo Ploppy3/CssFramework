@@ -74,8 +74,8 @@ body {
   }
 }
 .row, .column {
-  &.no-wrap {
-    flex-wrap: nowrap;
+  &.wrap {
+    flex-wrap: wrap;
   }
   &.justify-center {
     justify-content: center;
