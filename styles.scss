@@ -128,7 +128,7 @@ body {
   will-change: transform;
 }
 /// Prevent content overflow,overflowing content will be accessible via scroll-bars
-.overflow {
+.overflow-auto {
   overflow: auto;
   will-change: transform;
 }
