@@ -1,11 +1,11 @@
 /// Padding related to .row & .col rules
 $spacer-padding: 16px;
-html {
-  min-height: 100%;
+html,
+body {
+  height: 100%;
 }
 body {
   margin: 0;
-  height: 100%;
 }
 * {
   box-sizing: border-box;
@@ -13,6 +13,9 @@ body {
 /// Quick flex display row
 .row {
   display: flex; //overflow: auto;
+  &.reverse {
+    flex-direction: row-reverse;
+  }
   &.spacer {
     padding-left: $spacer-padding / 2;
     padding-right: $spacer-padding / 2;
@@ -45,6 +48,9 @@ body {
   display: flex;
   flex-direction: column;
   // overflow: auto;
+  &.reverse {
+    flex-direction: column-reverse;
+  }
   &.spacer {
     padding-top: $spacer-padding / 2;
     padding-bottom: $spacer-padding / 2;
