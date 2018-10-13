@@ -47,6 +47,7 @@ body {
 .col {
   display: flex;
   flex-direction: column;
+  // overflow: auto;
   &.reverse {
     flex-direction: column-reverse;
   }
