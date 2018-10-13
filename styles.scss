@@ -74,6 +74,9 @@ body {
 }
 .row,
 .col {
+  &.baseline {
+    align-items: baseline;
+  }
   &.center-items {
     align-items: center;
   }
