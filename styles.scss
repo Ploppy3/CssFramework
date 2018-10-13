@@ -13,6 +13,9 @@ body {
 /// Quick flex display row
 .row {
   display: flex; //overflow: auto;
+  &.reverse {
+    flex-direction: row-reverse;
+  }
   &.spacer {
     padding-left: $spacer-padding;
     padding-right: $spacer-padding;
@@ -44,7 +47,9 @@ body {
 .col {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  &.reverse {
+    flex-direction: column-reverse;
+  }
   &.spacer {
     padding-top: $spacer-padding;
     padding-bottom: $spacer-padding;
