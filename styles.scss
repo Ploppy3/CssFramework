@@ -1,11 +1,11 @@
-/// Padding related to .horizontal-spacer & .vertical-spacer rules
-$spacer-padding: 8px;
-html,
-body {
-  height: 100%;
+/// Padding related to .row & .col rules
+$spacer-padding: 16px;
+html {
+  min-height: 100%;
 }
 body {
   margin: 0;
+  height: 100%;
 }
 * {
   box-sizing: border-box;
@@ -13,15 +13,12 @@ body {
 /// Quick flex display row
 .row {
   display: flex; //overflow: auto;
-  &.reverse {
-    flex-direction: row-reverse;
-  }
   &.spacer {
-    padding-left: $spacer-padding;
-    padding-right: $spacer-padding;
+    padding-left: $spacer-padding / 2;
+    padding-right: $spacer-padding / 2;
     >* {
-      margin-left: $spacer-padding;
-      margin-right: $spacer-padding;
+      margin-left: $spacer-padding / 2;
+      margin-right: $spacer-padding / 2;
     }
   }
   &.inner-spacer {
@@ -48,15 +45,12 @@ body {
   display: flex;
   flex-direction: column;
   // overflow: auto;
-  &.reverse {
-    flex-direction: column-reverse;
-  }
   &.spacer {
-    padding-top: $spacer-padding;
-    padding-bottom: $spacer-padding;
+    padding-top: $spacer-padding / 2;
+    padding-bottom: $spacer-padding / 2;
     >* {
-      margin-top: $spacer-padding;
-      margin-bottom: $spacer-padding;
+      margin-top: $spacer-padding / 2;
+      margin-bottom: $spacer-padding / 2;
     }
   }
   &.inner-spacer {
