@@ -95,8 +95,8 @@ body {
   &.justify-center {
     justify-content: center;
   }
-  &.justify-right {
-    justify-content: right;
+  &.justify-end {
+    justify-content: flex-end;
   }
   >.grow {
     flex-grow: 1;
