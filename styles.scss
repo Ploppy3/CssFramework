@@ -109,6 +109,10 @@ body {
     align-self: center;
   }
 }
+/// Elevate element using z-index
+.z-1 {
+  z-index: 1;
+}
 /// Transform text to uppercase
 .uppercase {
   text-transform: uppercase;
