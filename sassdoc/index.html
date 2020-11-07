@@ -4,7 +4,7 @@
 .fill-height" data-type="css"><a href="#undefined-css-.max-height,
 .fill-height">.max-height, .fill-height</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".gpu-layer" data-type="css"><a href="#undefined-css-.gpu-layer">.gpu-layer</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".overflow-auto" data-type="css"><a href="#undefined-css-.overflow-auto">.overflow-auto</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".no-overflow,
 .overflow-hidden" data-type="css"><a href="#undefined-css-.no-overflow,
-.overflow-hidden">.no-overflow, .overflow-hidden</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-spacer-padding"><h3 class="item__heading"><a class="item__name" href="#variable-spacer-padding">spacer-padding</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$spacer-padding: 16px;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Padding related to .row &amp; .col rules</p></div></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-.row"><h3 class="item__heading"><a class="item__name" href="#css-.row">.row</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.row {
+.overflow-hidden">.no-overflow, .overflow-hidden</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".desktop-only" data-type="css"><a href="#undefined-css-.desktop-only">.desktop-only</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".mobile-only" data-type="css"><a href="#undefined-css-.mobile-only">.mobile-only</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-spacer-padding"><h3 class="item__heading"><a class="item__name" href="#variable-spacer-padding">spacer-padding</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$spacer-padding: 16px;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Padding related to .row &amp; .col rules</p></div></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-.row"><h3 class="item__heading"><a class="item__name" href="#css-.row">.row</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.row {
   display: flex;
   &amp;.reverse {
     flex-direction: row-reverse;
@@ -19,16 +19,24 @@
   }
   &amp;.inner-spacer {
     &gt; * {
-      margin-left: $spacer-padding/2;
-      margin-right: $spacer-padding/2;
+      margin-left: $spacer-padding / 2;
+      margin-right: $spacer-padding / 2;
     }
     &gt; *:first-child {
       margin-left: 0;
-      margin-right: $spacer-padding/2;
+      margin-right: $spacer-padding / 2;
+    }
+    &amp;.reverse &gt; *:first-child {
+      margin-left: $spacer-padding / 2;
+      margin-right: 0;
     }
     &gt; *:last-child {
-      margin-left: $spacer-padding/2;
+      margin-left: $spacer-padding / 2;
       margin-right: 0;
+    }
+    &amp;.reverse &gt; *:last-child {
+      margin-left: 0;
+      margin-right: $spacer-padding / 2;
     }
     &gt; *:only-child {
       margin-left: 0;
@@ -59,9 +67,17 @@
       margin-top: 0;
       margin-bottom: $spacer-padding / 2;
     }
+    &amp;.reverse &gt; *:first-child {
+      margin-top: $spacer-padding / 2;
+      margin-bottom: 0;
+    }
     &gt; *:last-child {
       margin-top: $spacer-padding / 2;
       margin-bottom: 0;
+    }
+    &amp;.reverse &gt; *:last-child {
+      margin-top: 0;
+      margin-bottom: $spacer-padding / 2;
     }
     &gt; *:only-child {
       margin-top: 0;
@@ -105,4 +121,8 @@
   overflow: hidden;
 }</code>" data-collapsed=".no-overflow,
 .overflow-hidden { ... }"><code>.no-overflow,
-.overflow-hidden { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Prevent content overflow, overflow is hidden</p></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">SassDoc</span><!-- Version --><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+.overflow-hidden { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Prevent content overflow, overflow is hidden</p></div></section><section class="main__item container item" id="undefined-css-.desktop-only"><h3 class="item__heading"><a class="item__name" href="#css-.desktop-only">.desktop-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.desktop-only {
+  display: none;
+}</code>" data-collapsed=".desktop-only { ... }"><code>.desktop-only { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets the element to only show on desktop</p></div></section><section class="main__item container item" id="undefined-css-.mobile-only"><h3 class="item__heading"><a class="item__name" href="#css-.mobile-only">.mobile-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.mobile-only {
+  display: none;
+}</code>" data-collapsed=".mobile-only { ... }"><code>.mobile-only { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets the element to only show on mobile</p></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">SassDoc</span><!-- Version --><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

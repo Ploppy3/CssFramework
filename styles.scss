@@ -26,16 +26,24 @@ body {
   }
   &.inner-spacer {
     > * {
-      margin-left: $spacer-padding/2;
-      margin-right: $spacer-padding/2;
+      margin-left: $spacer-padding / 2;
+      margin-right: $spacer-padding / 2;
     }
     > *:first-child {
       margin-left: 0;
-      margin-right: $spacer-padding/2;
+      margin-right: $spacer-padding / 2;
+    }
+    &.reverse > *:first-child {
+      margin-left: $spacer-padding / 2;
+      margin-right: 0;
     }
     > *:last-child {
-      margin-left: $spacer-padding/2;
+      margin-left: $spacer-padding / 2;
       margin-right: 0;
+    }
+    &.reverse > *:last-child {
+      margin-left: 0;
+      margin-right: $spacer-padding / 2;
     }
     > *:only-child {
       margin-left: 0;
@@ -68,9 +76,17 @@ body {
       margin-top: 0;
       margin-bottom: $spacer-padding / 2;
     }
+    &.reverse > *:first-child {
+      margin-top: $spacer-padding / 2;
+      margin-bottom: 0;
+    }
     > *:last-child {
       margin-top: $spacer-padding / 2;
       margin-bottom: 0;
+    }
+    &.reverse > *:last-child {
+      margin-top: 0;
+      margin-bottom: $spacer-padding / 2;
     }
     > *:only-child {
       margin-top: 0;
@@ -161,11 +177,13 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  /// Sets the element to only show on desktop
   .desktop-only {
     display: none;
   }
 }
 @media only screen and (min-width: 600px) {
+  /// Sets the element to only show on mobile
   .mobile-only {
     display: none;
   }
